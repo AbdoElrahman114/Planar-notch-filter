@@ -1,0 +1,47 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no TopDesignName="D:\College\Planar-notch-filter\notch_filter_v3_prj\networks\CL_MS"
+
+w0=3.416690
+
+L0=18.838500
+
+w1=3.246850
+
+L1=18.991500
+
+w2=3.038240
+
+L2=18.985900
+
+L3=18.921800
+
+w3=3.402980
+
+s1=1.399200
+
+s2=2.418490
+
+s3=9.236530
+Port:Term2  _net33 0 Num=2 Z=50 Ohm Noise=yes 
+Port:Term1  _net34 0 Num=1 Z=50 Ohm Noise=yes 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=2 GHz Stop=3 GHz Step=.01 MHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+model MSub1 MSUB H=1.524 mm Er=3.48 Mur=1 Cond=5.813e+7 Hu=1.0e+033 mm T=35 um TanD=37e-4 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+MLIN2:TL1  _net34 _net35 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MLIN2:TL2  _net41 _net33 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MCLIN:CLin1  _net35 0 _net21 _net36 Subst="MSub1" W=w1 mm S=s1 mm L=L1 mm 
+MCLIN:CLin2  0 _net36 _net37 _net18 Subst="MSub1" W=w2 mm S=s2 mm L=L2 mm 
+MCLIN:CLin3  _net37 0 _net13 _net38 Subst="MSub1" W=w3 mm S=s3 mm L=L3 mm 
+MCLIN:CLin4  0 _net38 _net39 _net10 Subst="MSub1" W=w3 mm S=s3 mm L=L3 mm 
+MCLIN:CLin5  _net39 0 _net5 _net40 Subst="MSub1" W=w2 mm S=s2 mm L=L2 mm 
+MCLIN:CLin6  0 _net40 _net41 _net2 Subst="MSub1" W=w1 mm S=s1 mm L=L1 mm 
