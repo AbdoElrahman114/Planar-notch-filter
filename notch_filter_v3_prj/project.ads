@@ -1,4 +1,4 @@
-<ADSProject Revision="14" Version="100">
+<ADSProject Revision="20" Version="100">
     <Project Name="">
         <Design Name="CL_MS.dsn" />
         <Design Name="CL_TL.dsn" />
@@ -22,10 +22,8 @@
         <Dataset Name="LR_MS_v3.ds" />
         <Dataset Name="CL_MS_Tuned.ds" />
         <Dataset Name="CL_MS.ds" />
-        <Data_Display Name="LR_MS_v1.dds" />
-        <Design Name="LR_MS_v1.dsn" />
         <Dataset Name="LR_MS_v1.ds" />
-        <Data_Display Name="LR_MS_v2.dds" />
-        <Design Name="LR_MS_v2.dsn" />
+        <Design Name="LR_MS.dsn" />
+        <Data_Display Name="LR_MS.dds" />
     </Project>
 </ADSProject>

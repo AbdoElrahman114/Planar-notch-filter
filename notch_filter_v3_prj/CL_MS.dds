@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2024-12-18T18:36:08Z");
+	set(ddoId, "FileModifiedDateAndTime", "2024-12-20T07:22:13Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "CL_MS");
@@ -277,12 +277,12 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2398390000.000000000000000000000
 		set(markerID, "MkrLabelFontSize", 167);
 		set(markerID, "MkrLabelColor", 0);
 		set(markerID, "MkrReadoutFont", "Arial For CAE");
-		set(markerID, "MkrReadoutFontSize", 167);
+		set(markerID, "MkrReadoutFontSize", 83);
 		set(markerID, "MkrReadoutColor", 0);
-		set(markerID, "MkrReadoutLeft", 6500);
-		set(markerID, "MkrReadoutRight", 7964);
-		set(markerID, "MkrReadoutBottom", 2696);
-		set(markerID, "MkrReadoutTop", 2000);
+		set(markerID, "MkrReadoutLeft", 6625);
+		set(markerID, "MkrReadoutRight", 7359);
+		set(markerID, "MkrReadoutBottom", 4700);
+		set(markerID, "MkrReadoutTop", 4348);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
 	}
@@ -522,7 +522,7 @@ set(ddoId, "EnableExpressionUpdates", TRUE);
 ddWinId = get_new(ddsId, "Window");
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 1493075511);
-	 set(ddWinId, "PageViewRect_1493075511", list(5593, 6038, 15414, 1666));
+	 set(ddWinId, "PageViewRect_1493075511", list(4868, 5281, 11189, 2467));
 	set(ddWinId, "Frame", list(-8, -8, 1360, 705));
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);

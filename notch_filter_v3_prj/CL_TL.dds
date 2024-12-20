@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2024-12-18T18:36:04Z");
+	set(ddoId, "FileModifiedDateAndTime", "2024-12-20T04:48:38Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "CL_TL");
@@ -34,9 +34,9 @@ goId0 = get_new(pageId, "Plot");
  set(goId0, "Name", "");
        set(goId0, "Uid", 1235565418);
  // Graphical Object:
- set(goId0, "Right", 7766);
+ set(goId0, "Right", 7485);
  set(goId0, "Bottom", 5629);
- set(goId0, "Left", 3133);
+ set(goId0, "Left", 2883);
   set(goId0, "Top", 2625);
  set(goId0, "Zrot", 0.000000);
  set(goId0, "Yrot", 0.000000);
@@ -52,7 +52,7 @@ goId0 = get_new(pageId, "Plot");
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
 	set(goId0, "LeftMargin", 742);
-	set(goId0, "RightMargin", 141);
+	set(goId0, "RightMargin", 110);
 	set(goId0, "TopMargin", 125);
 	set(goId0, "BottomMargin", 504);
 // Plot Title...
@@ -75,9 +75,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", 2375000000);
-		 set(axisID, "MaxValue", 2425000000);
-		 set(axisID, "StepSize", 5000000);
+		 set(axisID, "MinValue", 2200000000);
+		 set(axisID, "MaxValue", 2600000000);
+		 set(axisID, "StepSize", 50000000);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -228,7 +228,7 @@ traceID = get_new(goId0, "Trace", "dB(S(2,1))", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "m1", "2.400GHz", 0, "", "", 16, "");
+markerID = get_new(traceID, "MarkerNew", "m1", "2400000000.00000000000000000000000000000000", 0, "", "", 16, "");
 // Base Class Object:
  set(markerID, "Name", "");
        set(markerID, "Uid", 2002005900);
@@ -277,12 +277,12 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2.400GHz", 0, "", "", 16, "");
 		set(markerID, "MkrLabelFontSize", 167);
 		set(markerID, "MkrLabelColor", 0);
 		set(markerID, "MkrReadoutFont", "Arial For CAE");
-		set(markerID, "MkrReadoutFontSize", 167);
+		set(markerID, "MkrReadoutFontSize", 83);
 		set(markerID, "MkrReadoutColor", 0);
-		set(markerID, "MkrReadoutLeft", 4375);
-		set(markerID, "MkrReadoutRight", 5929);
-		set(markerID, "MkrReadoutBottom", 2567);
-		set(markerID, "MkrReadoutTop", 1875);
+		set(markerID, "MkrReadoutLeft", 3750);
+		set(markerID, "MkrReadoutRight", 4581);
+		set(markerID, "MkrReadoutBottom", 4856);
+		set(markerID, "MkrReadoutTop", 4500);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
 	}
@@ -293,6 +293,14 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2.400GHz", 0, "", "", 16, "");
 		set(markerID, "MkrAperturePercentY", 10);
 		set(markerID, "DrawApertureOnOff", FALSE);
 	}
+legendID = get_new(goId0, "Legend", 3242, 1750);
+// Legend
+	if(legendID != NULL) {
+		set(legendID, "Font", "Arial For CAE");
+		set(legendID, "FontSize", 83);
+		set(legendID, "LegendIndentableOnOff", TRUE);
+		set(legendID, "Uid", 1836873746);
+	}
 // Initialize plot
 set(goId0, "InitPlot", 0);
 goId0 = get_new(pageId, "Plot");
@@ -300,7 +308,7 @@ goId0 = get_new(pageId, "Plot");
  set(goId0, "Name", "");
        set(goId0, "Uid", 1351221106);
  // Graphical Object:
- set(goId0, "Right", 12391);
+ set(goId0, "Right", 12360);
  set(goId0, "Bottom", 5629);
  set(goId0, "Left", 7825);
   set(goId0, "Top", 2625);
@@ -318,7 +326,7 @@ goId0 = get_new(pageId, "Plot");
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
 	set(goId0, "LeftMargin", 675);
-	set(goId0, "RightMargin", 141);
+	set(goId0, "RightMargin", 110);
 	set(goId0, "TopMargin", 125);
 	set(goId0, "BottomMargin", 504);
 // Plot Title...
@@ -341,9 +349,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", 2375000000);
-		 set(axisID, "MaxValue", 2425000000);
-		 set(axisID, "StepSize", 5000000);
+		 set(axisID, "MinValue", 2200000000);
+		 set(axisID, "MaxValue", 2600000000);
+		 set(axisID, "StepSize", 50000000);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -494,6 +502,14 @@ traceID = get_new(goId0, "Trace", "mag(S(2,1))", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
+legendID = get_new(goId0, "Legend", 3300, 1875);
+// Legend
+	if(legendID != NULL) {
+		set(legendID, "Font", "Arial For CAE");
+		set(legendID, "FontSize", 83);
+		set(legendID, "LegendIndentableOnOff", TRUE);
+		set(legendID, "Uid", 1616005297);
+	}
 // Initialize plot
 set(goId0, "InitPlot", 0);
 // Base Class Object:
@@ -506,7 +522,7 @@ set(ddoId, "EnableExpressionUpdates", TRUE);
 ddWinId = get_new(ddsId, "Window");
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 1628873809);
-	 set(ddWinId, "PageViewRect_1628873809", list(4126, 5240, 11829, 1811));
+	 set(ddWinId, "PageViewRect_1628873809", list(2167, 5328, 9879, 1895));
 	set(ddWinId, "Frame", list(-8, -8, 1360, 705));
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);

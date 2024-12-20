@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2024-12-18T18:26:13Z");
+	set(ddoId, "FileModifiedDateAndTime", "2024-12-20T08:09:21Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "CL_MS_Tuned");
@@ -98,7 +98,7 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -60);
+		 set(axisID, "MinValue", -80);
 		 set(axisID, "MaxValue", 0);
 		 set(axisID, "StepSize", 10);
 		 set(axisID, "Logarithmic", FALSE);
@@ -274,15 +274,15 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2399900000.000000000000000000000
 // More marker:
 	if (markerID != NULL) {
 		set(markerID, "MkrLabelFont", "Arial For CAE");
-		set(markerID, "MkrLabelFontSize", 167);
+		set(markerID, "MkrLabelFontSize", 139);
 		set(markerID, "MkrLabelColor", 0);
 		set(markerID, "MkrReadoutFont", "Arial For CAE");
-		set(markerID, "MkrReadoutFontSize", 167);
+		set(markerID, "MkrReadoutFontSize", 83);
 		set(markerID, "MkrReadoutColor", 0);
 		set(markerID, "MkrReadoutLeft", 6750);
-		set(markerID, "MkrReadoutRight", 8222);
-		set(markerID, "MkrReadoutBottom", 2954);
-		set(markerID, "MkrReadoutTop", 2250);
+		set(markerID, "MkrReadoutRight", 7492);
+		set(markerID, "MkrReadoutBottom", 5360);
+		set(markerID, "MkrReadoutTop", 5000);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
 	}
@@ -522,8 +522,8 @@ set(ddoId, "EnableExpressionUpdates", TRUE);
 ddWinId = get_new(ddsId, "Window");
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 271156642);
-	 set(ddWinId, "PageViewRect_271156642", list(5826, 6545, 10850, 1613));
-	set(ddWinId, "Frame", list(673, 0, 678, 696));
+	 set(ddWinId, "PageViewRect_271156642", list(5761, 6650, 15410, 2354));
+	set(ddWinId, "Frame", list(-8, -8, 1360, 705));
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);
 	set(ddWinId,"WindowPageOrder", list("page 1"));

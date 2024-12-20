@@ -1,21 +1,29 @@
 
-Options ResourceUsage=yes UseNutmegFormat=no TopDesignName="LR_MS_v2"
+Options ResourceUsage=yes UseNutmegFormat=no TopDesignName="D:\College\Planar-notch-filter\notch_filter_v3_prj\networks\LR_MS_Tuned"
 
-w3=3.40298 tune{ 1.70149 to 5.10447 by 0.340298 }
-s3=9.23653 tune{ 4.618265 to 13.854795 by 0.923653 }
-L3=18.9218 tune{ 9.4609 to 28.3827 by 1.89218 }
+w0=3.075021 tune{ 1.708345 to 5.125035 by 0.341669 }
+L0=18.8135 tune{ 9.41925 to 28.25775 by 0.025 }
 
-w2=3.03824 tune{ 1.51912 to 4.55736 by 0.303824 }
-s2=2.41849 tune{ 1.209245 to 3.627735 by 0.241849 }
-L2=18.9859 tune{ 9.49295 to 28.47885 by 1.89859 }
-
-w1=3.24685 tune{ 1.623425 to 4.870275 by 0.324685 }
-s1=1.3992 tune{ 0.6996 to 2.0988 by 0.13992 }
-L1=18.9915 tune{ 9.49575 to 28.48725 by 1.89915 }
-
-w0=3.41669 tune{ 1.708345 to 5.125035 by 0.341669 }
-s0=0.25 tune{ 0.125 to 0.375 by 0.025 }
-L0=18.8385 tune{ 9.41925 to 28.25775 by 1.88385 }
+s1 =1.0116 tune{ 0.051 to 5.438 by 0.0292 }
+s2 =0.91431 tune{ 0.051 to 5.438 by 0.0221 }
+s3 =0.74111 tune{ 0.051 to 5.438 by 0.0102 }
+MCORN:Corn8  _net1030 _net1105 Subst="MSub1" W=w0 mm 
+MLOC2:TL7  _net1105 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MLOC2:TL6  _net1101 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MCORN:Corn7  _net1022 _net1101 Subst="MSub1" W=w0 mm 
+MCORN:Corn6  _net1048 _net983 Subst="MSub1" W=w0 mm 
+MLOC2:TL5  _net1048 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MCORN:Corn5  _net1044 _net1040 Subst="MSub1" W=w0 mm 
+MLOC2:TL4  _net1044 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MLOC2:TL3  _net1036 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MCORN:Corn4  _net1036 _net1035 Subst="MSub1" W=w0 mm 
+MCLIN:CLin4  _net1032 _net1031 _net1029 _net1030 Subst="MSub1" W=w0 mm S=s2 mm L=L0 mm 
+MCLIN:CLin3  _net1028 _net1027 _net1040 _net1031 Subst="MSub1" W=w0 mm S=s3 mm L=L0 mm 
+MCLIN:CLin2  _net1024 _net1023 _net1028 _net1022 Subst="MSub1" W=w0 mm S=s2 mm L=L0 mm 
+MCLIN:CLin5  _net1029 _net1020 _net983 _net976 Subst="MSub1" W=w0 mm S=s1 mm L=L0 mm 
+Port:Term2  _net1006 0 Num=2 Z=50 Ohm Noise=yes 
+MLIN2:TL2  _net976 _net1006 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
+MCLIN:CLin1  _net1001 _net1000 _net1035 _net1023 Subst="MSub1" W=w0 mm S=s1 mm L=L0 mm 
 S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
 SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
 
@@ -28,26 +36,6 @@ OutputPlan:SP1_Output \
       UseSavedEquationNestLevel=yes \
       SavedEquationNestLevel=2
 
-MLOC2:TL6  _net543 Subst="MSub1" W=w1 mm L=L2 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MACLIN:CLin6  _net542 _net541 _net540 _net539 Subst="MSub1" W1=w1 mm W2=w0 mm S=s0 mm L=L2 mm 
-MLOC2:TL5  _net538 Subst="MSub1" W=w2 mm L=L2 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MACLIN:CLin5  _net537 _net541 _net534 _net533 Subst="MSub1" W1=w2 mm W2=w0 mm S=s0 mm L=L2 mm 
-MLOC2:TL7  _net532 Subst="MSub1" W=w3 mm L=L3 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MACLIN:CLin4  _net531 _net530 _net534 _net528 Subst="MSub1" W1=w3 mm W2=w0 mm S=s0 mm L=L3 mm 
-MLOC2:TL4  _net527 Subst="MSub1" W=w3 mm L=L3 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MACLIN:CLin3  _net526 _net530 _net523 _net522 Subst="MSub1" W1=w3 mm W2=w0 mm S=s0 mm L=L3 mm 
-MACLIN:CLin2  _net521 _net520 _net523 _net518 Subst="MSub1" W1=w2 mm W2=w0 mm S=s0 mm L=L2 mm 
-MLOC2:TL8  _net517 Subst="MSub1" W=w2 mm L=L2 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MLOC2:TL3  _net511 Subst="MSub1" W=w1 mm L=L1 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-MACLIN:CLin1  _net510 _net520 _net508 _net507 Subst="MSub1" W1=w1 mm W2=w0 mm S=s0 mm L=L1 mm 
-MCORN:Corn2  _net528 _net532 Subst="MSub1" W=w3 mm 
-MCORN:Corn4  _net511 _net510 Subst="MSub1" W=w1 mm 
-MCORN:Corn1  _net518 _net517 Subst="MSub1" W=w2 mm 
-MCORN:Corn5  _net527 _net526 Subst="MSub1" W=w3 mm 
-MCORN:Corn6  _net538 _net537 Subst="MSub1" W=w2 mm 
-MCORN:Corn3  _net539 _net543 Subst="MSub1" W=w1 mm 
-Port:Term2  _net270 0 Num=2 Z=50 Ohm Noise=yes 
-MLIN2:TL2  _net540 _net270 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
-Port:Term1  _net34 0 Num=1 Z=50 Ohm Noise=yes 
-MLIN2:TL1  _net34 _net508 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 
 model MSub1 MSUB H=1.524 mm Er=3.48 Mur=1 Cond=5.813e+7 Hu=1.0e+033 mm T=35 um TanD=37e-4 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+Port:Term1  _net546 0 Num=1 Z=50 Ohm Noise=yes 
+MLIN2:TL1  _net546 _net1001 Subst="MSub1" W=w0 mm L=L0 mm Wall1=2.5e+028 mm Wall2=2.5e+028 mm Mod=1 

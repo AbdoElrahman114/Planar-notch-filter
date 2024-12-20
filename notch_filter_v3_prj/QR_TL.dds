@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2024-12-18T18:20:25Z");
+	set(ddoId, "FileModifiedDateAndTime", "2024-12-20T04:43:56Z");
 	set(ddoId, "FileCreatedDateAndTime", "2024-12-18T05:06:06Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
@@ -275,15 +275,15 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2400050000.000000000000000000000
 // More marker:
 	if (markerID != NULL) {
 		set(markerID, "MkrLabelFont", "Arial For CAE");
-		set(markerID, "MkrLabelFontSize", 167);
+		set(markerID, "MkrLabelFontSize", 139);
 		set(markerID, "MkrLabelColor", 0);
 		set(markerID, "MkrReadoutFont", "Arial For CAE");
-		set(markerID, "MkrReadoutFontSize", 167);
+		set(markerID, "MkrReadoutFontSize", 83);
 		set(markerID, "MkrReadoutColor", 0);
-		set(markerID, "MkrReadoutLeft", 2000);
-		set(markerID, "MkrReadoutRight", 3558);
-		set(markerID, "MkrReadoutBottom", 946);
-		set(markerID, "MkrReadoutTop", 250);
+		set(markerID, "MkrReadoutLeft", 1750);
+		set(markerID, "MkrReadoutRight", 2554);
+		set(markerID, "MkrReadoutBottom", 3376);
+		set(markerID, "MkrReadoutTop", 3000);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
 	}
@@ -293,6 +293,14 @@ markerID = get_new(traceID, "MarkerNew", "m1", "2400050000.000000000000000000000
 		set(markerID, "MkrAperturePercentX", 10);
 		set(markerID, "MkrAperturePercentY", 10);
 		set(markerID, "DrawApertureOnOff", FALSE);
+	}
+legendID = get_new(goId0, "Legend", 3179, 1875);
+// Legend
+	if(legendID != NULL) {
+		set(legendID, "Font", "Arial For CAE");
+		set(legendID, "FontSize", 83);
+		set(legendID, "LegendIndentableOnOff", TRUE);
+		set(legendID, "Uid", 1539945551);
 	}
 // Initialize plot
 set(goId0, "InitPlot", 0);
@@ -495,6 +503,14 @@ traceID = get_new(goId0, "Trace", "mag(S(1,1))", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
+legendID = get_new(goId0, "Legend", 3175, 750);
+// Legend
+	if(legendID != NULL) {
+		set(legendID, "Font", "Arial For CAE");
+		set(legendID, "FontSize", 83);
+		set(legendID, "LegendIndentableOnOff", TRUE);
+		set(legendID, "Uid", 275437605);
+	}
 // Initialize plot
 set(goId0, "InitPlot", 0);
 // Base Class Object:
@@ -507,7 +523,7 @@ set(ddoId, "EnableExpressionUpdates", TRUE);
 ddWinId = get_new(ddsId, "Window");
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 546217390);
-	 set(ddWinId, "PageViewRect_546217390", list(763, 4248, 10293, 6));
+	 set(ddWinId, "PageViewRect_546217390", list(-3486, 5346, 11075, -1136));
 	set(ddWinId, "Frame", list(-8, -8, 1360, 705));
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);
